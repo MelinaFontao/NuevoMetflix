@@ -1,4 +1,6 @@
-import personas.*;
+package app;
+
+import app.personas.*;
 
 public class Episodio {
 

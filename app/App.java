@@ -1,7 +1,8 @@
+package app;
+
 import java.util.*;
 
 public class App {
-
 
     public static Scanner Teclado = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
@@ -15,6 +16,13 @@ public class App {
         System.out.println("Inicializando catalogo de Metflix");//No hace nada, solo se ve bonito.
 
         miMetflix.inicializarCatalogo();//Estoy llamando al metodo que crea las pelis y series.
+
+
+        //Voy a llamar al metodo de reproducir el trailer
+
+        miMetflix.mostrarNominaciones();
+
+
 
         //Metflix es el encargado de buscar una serie. Vamos a tener que enviar un metodo que se llame BuscarSerie
         //Si la serie es encontrada, creo una variable que guarde el resultado, sino esta serie encontrada se me pierde.

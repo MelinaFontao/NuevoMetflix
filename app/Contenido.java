@@ -1,6 +1,8 @@
+package app;
+
 import java.util.ArrayList;
 import java.util.List;
-import personas.*;//En este caso hace referencia a todas las clases del paquete
+import app.personas.*;//En este caso hace referencia a todas las clases del paquete
 
 public abstract class Contenido {
     //No se podra crear ningun contenido, solo sus subclases (series o peliculas)

@@ -1,10 +1,13 @@
+package app;
+
 import java.util.ArrayList;
 import java.util.List;
-import personas.*;
+import app.personas.*;
 
 public class Metflix {
     public List<Pelicula> peliculas = new ArrayList<>();
     public List<Serie> series = new ArrayList<>();
+    public List<INominable> nominados = new ArrayList();
 
     //Metodo que inicializa el catalogo con las pelis/series que querramos
 
@@ -56,6 +59,10 @@ public class Metflix {
        batman.actores.add(actor);
 
        this.peliculas.add(batman);
+
+      //Lo agrego en la lista de Nominados
+       this.nominados.add(batman);
+       this.nominados.add(actor);
 
        //Pelicula: Naruto Shippuden: The Lost Tower | La torre perdida---------------------------------------------
        Pelicula narutoPeli = new Pelicula();
@@ -310,6 +317,32 @@ public class Metflix {
             
         }
         return null;
+    }
+
+    //Creo un metodo para mostrar las nominaciones
+
+    public void mostrarNominaciones(){
+        //voy a imprimir el trailer de nominados.
+
+        int totalPelis = 0;
+        int totalActores = 0;
+
+        for (INominable nominado : this.nominados) {
+            nominado.reproducirTrailerNominacion();
+
+            if(nominado instanceof Pelicula){
+                totalPelis++;
+            }
+            else{
+                if (nominado instanceof Actor){
+                    totalActores++;
+
+                }
+            }
+        }
+
+        System.out.println("Peliculas nominadas: " + totalPelis);
+        System.out.println("Actores nominados: " + totalActores);
     }
    
 

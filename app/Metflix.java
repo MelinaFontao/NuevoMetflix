@@ -37,7 +37,7 @@ public class Metflix {
        actor.setNombre ("Leo Dicaprio");
 
        //Agrego a la lista de actores del objeto titanic
-       titanic.actores.add(actor);//metodo Add -> agregar a una lista
+       titanic.getActores().add(actor);//metodo Add -> agregar a una lista
 
        //Recien ahora estoy agregando a Titanic al catalogo
        this.peliculas.add(titanic); //this se usa para agregar a la lista de una misma clase.
@@ -56,7 +56,7 @@ public class Metflix {
        actor = new Actor(); //Creo un nuevo actor, pero referenciado con la variable actor
        actor.setNombre("Christian Bale");
 
-       batman.actores.add(actor);
+       batman.getActores().add(actor);
 
        this.peliculas.add(batman);
 
@@ -72,11 +72,11 @@ public class Metflix {
 
        actor = new Actor(); 
        actor.setNombre("Junko Takeuchi");
-       narutoPeli.actores.add(actor);
+       narutoPeli.getActores().add(actor);
 
        actor = new Actor(); 
        actor.setNombre ("Emiko Shinohara");
-       narutoPeli.actores.add(actor);
+       narutoPeli.getActores().add(actor);
 
        this.peliculas.add(narutoPeli);
 
@@ -88,11 +88,11 @@ public class Metflix {
 
        actor = new Actor(); 
        actor.setNombre ("Inori Minase");
-       danMachiPeli.actores.add(actor);
+       danMachiPeli.getActores().add(actor);
 
        actor = new Actor(); 
        actor.setNombre ("Yoshitsugu Matsuoka");
-       danMachiPeli.actores.add(actor);
+       danMachiPeli.getActores().add(actor);
 
        this.peliculas.add(danMachiPeli);
 
@@ -106,12 +106,12 @@ public class Metflix {
        actor = new Actor();
        actor.setNombre ("Neil Patrick Harris");
 
-       howIMetYM.actores.add(actor);
+       howIMetYM.getActores().add(actor);
 
        actor = new Actor();
        actor.setNombre ("Cobie Smulders");
 
-       howIMetYM.actores.add(actor);
+       howIMetYM.getActores().add(actor);
 
        //T5: E11
        Temporada temporada = new Temporada();
@@ -128,15 +128,15 @@ public class Metflix {
        episodio.setDuracion(43);
 
        //vinculo temporada con episodio
-       temporada.episodios.add(episodio);
+       temporada.getEpisodios().add(episodio);
 
        episodio = new Episodio(1, "Definitions");
        episodio.setDuracion(41);
 
-       temporada.episodios.add(episodio);
+       temporada.getEpisodios().add(episodio);
 
        //Agrego la temporada
-       howIMetYM.temporadas.add(temporada);
+       howIMetYM.getTemporadas().add(temporada);
        //Creo un Websodio
        Websodio ws = new Websodio(35, "Nombre websodio en Internet", "http://miepisodios.com/websodio.avi");
        //ws.setNombre ("Nombre websodio en Internet");
@@ -148,7 +148,7 @@ public class Metflix {
        //va a estar en la lista de episodios
        //Sin embargo hay que redefinir a la hora de reproducir
 
-       temporada.episodios.add(ws);
+       temporada.getEpisodios().add(ws);
 
 
        //Creo otra temporada
@@ -161,14 +161,14 @@ public class Metflix {
        episodio = new Episodio(1, "Wait for it");
 
        //vinculo temporada con episodio
-       temporada.episodios.add(episodio);
+       temporada.getEpisodios().add(episodio);
 
        episodio = new Episodio(4, "Little boys");
 
-       temporada.episodios.add(episodio);
+       temporada.getEpisodios().add(episodio);
 
        //Agrego la temporada
-       howIMetYM.temporadas.add(temporada);
+       howIMetYM.getTemporadas().add(temporada);
        
        // Aca esta toda la serie con 2 temporadas y cada una con 2 episodios.
        this.series.add(howIMetYM);
@@ -182,7 +182,7 @@ public class Metflix {
         actor = new Actor();
         actor.setNombre ("Kaley Cuoco");
  
-        bigBangT.actores.add(actor);
+        bigBangT.getActores().add(actor);
  
        
         //T5: E11
@@ -193,14 +193,14 @@ public class Metflix {
         episodio = new Episodio(1, "Pilot");
  
         //vinculo temporada con episodio
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
  
         episodio = new Episodio(9, "The Cooper - Hofstadter Polarization");
  
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
  
         //Agrego la temporada
-        bigBangT.temporadas.add(temporada);
+        bigBangT.getTemporadas().add(temporada);
  
         this.series.add(bigBangT);
 
@@ -213,12 +213,12 @@ public class Metflix {
         actor = new Actor();
         actor.setNombre ("Inori Minase");
 
-        danMachi.actores.add(actor);
+        danMachi.getActores().add(actor);
         
         actor = new Actor();
         actor.setNombre ("Yoshitsugu Matsuoka");
 
-        danMachi.actores.add(actor);
+        danMachi.getActores().add(actor);
        
         //T1: E6 y E7
         temporada = new Temporada();
@@ -228,14 +228,14 @@ public class Metflix {
         episodio = new Episodio(6, "Razon (Liliruca Arde)");
  
         //vinculo temporada con episodio
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
  
         episodio = new Episodio(7, "La princesa de la espada (Aiz Wallenstein)");
  
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
  
         //Agrego la temporada
-        danMachi.temporadas.add(temporada);
+        danMachi.getTemporadas().add(temporada);
  
         this.series.add(danMachi);
 
@@ -247,12 +247,12 @@ public class Metflix {
         actor = new Actor();
         actor.setNombre ("Junko Takeuchi");
 
-        narutoSH.actores.add(actor);
+        narutoSH.getActores().add(actor);
         
         actor = new Actor();
         actor.setNombre ("Emiko Shinohara");
 
-        narutoSH.actores.add(actor);
+        narutoSH.getActores().add(actor);
        
         //T12: E4 y E5
         temporada = new Temporada();
@@ -262,19 +262,19 @@ public class Metflix {
         episodio = new Episodio(4, "El destello naranja");
  
         //vinculo temporada con episodio
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
  
         episodio = new Episodio(5, "Objetivo: Nueve colas");
  
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
 
         episodio = new Episodio(19, "Por mi amigo");
  
-        temporada.episodios.add(episodio);
+        temporada.getEpisodios().add(episodio);
  
  
         //Agrego la temporada
-        narutoSH.temporadas.add(temporada);
+        narutoSH.getTemporadas().add(temporada);
  
         this.series.add(narutoSH);
 

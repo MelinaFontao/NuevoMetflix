@@ -13,7 +13,15 @@ public abstract class Contenido {
     //Idioma origen
     private int añoLanzamiento;
     public Actor actor;
-    public List<Actor> actores = new ArrayList<>();
+    private List<Actor> actores = new ArrayList<>();
+
+    public List<Actor> getActores(){
+       return this.actores;
+    }
+
+    public void setActores(List<Actor> actores) {
+        this.actores = actores;
+    }
 
     public String getNombre(){
         return this.nombre;

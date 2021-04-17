@@ -17,6 +17,7 @@ public class Pelicula extends Contenido implements INominable {
         this.duracion = duracion;
     }
 
+
     public void reproducir(){ 
         System.out.println("Reproduciendo pelicula:  " + this.getNombre());
 

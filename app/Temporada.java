@@ -6,7 +6,15 @@ import java.util.List;
 public class Temporada{
     private int numero;
     private String nombre; // Esto es el nombre de la temporada
-    public List<Episodio> episodios = new ArrayList<>();
+    private List<Episodio> episodios = new ArrayList<>();
+
+    public List<Episodio> getEpisodios(){
+        return this.episodios;
+    }
+ 
+    public void setActores(List<Episodio> episodios) {
+        this.episodios = episodios;
+    }
 
     public String getNombre(){
         return this.nombre;

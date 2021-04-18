@@ -7,11 +7,11 @@ import app.personas.*;//En este caso hace referencia a todas las clases del paqu
 public abstract class Contenido {
     //No se podra crear ningun contenido, solo sus subclases (series o peliculas)
     
-    private String nombre;
+    protected String nombre;
     public Genero genero;
     public Idioma idioma;
     //Idioma origen
-    private int añoLanzamiento;
+    protected int añoLanzamiento;
     public Actor actor;
     private List<Actor> actores = new ArrayList<>();
 

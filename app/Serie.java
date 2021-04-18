@@ -8,11 +8,11 @@ public class Serie extends Contenido {
 
     public List<Temporada> getTemporadas(){
         return this.temporadas;
-     }
+    }
  
-     public void setTemporadas(List<Temporada> temporadas) {
+    public void setTemporadas(List<Temporada> temporadas) {
         this.temporadas = temporadas;
-     } 
+    } 
 
     //Serie es la encargada de buscar las temporadas
     //Creamos el metodo para buscar la temporada:

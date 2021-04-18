@@ -9,6 +9,8 @@ public class Metflix {
     public List<Serie> series = new ArrayList<>();
     public List<INominable> nominados = new ArrayList();
 
+
+
     //Metodo que inicializa el catalogo con las pelis/series que querramos
 
     public void inicializarCatalogo(){
@@ -19,16 +21,18 @@ public class Metflix {
 
        //Pelis: Titanic, Batman: El caballero de la noche.
        //Declaro la variable pelicula que la llamo titanic
-       Pelicula titanic; //declara una variable que apuntara a una Pelicula. 
+       //Pelicula titanic; //declara una variable que apuntara a una Pelicula. 
        //Creo el espacio de memoria y la instancie llamando a new
-       titanic = new Pelicula(); //Estas dos ultimas lineas: Pelicula titanic = new Pelicula();
+       //titanic = new Pelicula(); //Estas dos ultimas lineas: Pelicula titanic = new Pelicula();
 
+       
+       Pelicula titanic = new Pelicula("Titanic", 1997, 210 );
 
 
        //A esa variable titanic le puse nombre, duracion y año de lanzamiento
-       titanic.setNombre("Titanic");
-       titanic.setAñoLanzamiento(1997);
-       titanic.duracion = 210; // 3hs 30min
+       //titanic.setNombre("Titanic");
+       //titanic.setAñoLanzamiento(1997);
+       //titanic.duracion = 210; // 3hs 30min
 
 
 
@@ -43,10 +47,11 @@ public class Metflix {
        this.peliculas.add(titanic); //this se usa para agregar a la lista de una misma clase.
 
        //Pelicula:Batman: el caballero de la noche---------------------------------------------------
-       Pelicula batman = new Pelicula();
-       batman.setNombre("Batman: el caballero de la noche");
-       batman.setAñoLanzamiento(2008);
-       batman.duracion = 152;
+       Pelicula batman = new Pelicula("Batman: el caballero de la noche", 2008, 152 );
+       //Pelicula batman = new Pelicula();
+       //batman.setNombre("Batman: el caballero de la noche");
+       //batman.setAñoLanzamiento(2008);
+       //batman.duracion = 152;
 
 
        //No voy a declarar otra variable actor, voy a reusar
@@ -65,10 +70,7 @@ public class Metflix {
        this.nominados.add(actor);
 
        //Pelicula: Naruto Shippuden: The Lost Tower | La torre perdida---------------------------------------------
-       Pelicula narutoPeli = new Pelicula();
-       narutoPeli.setNombre("Naruto Shippuden: The Lost Tower | La torre perdida");
-       narutoPeli.setAñoLanzamiento(2010);
-       narutoPeli.duracion = 85;
+       Pelicula narutoPeli = new Pelicula("Naruto Shippuden: The Lost Tower | La torre perdida", 2010, 85 );
 
        actor = new Actor(); 
        actor.setNombre("Junko Takeuchi");
@@ -81,10 +83,12 @@ public class Metflix {
        this.peliculas.add(narutoPeli);
 
        //Pelicula: DanMachi: Arrow of the Orion---------------------------------------------
-       Pelicula danMachiPeli = new Pelicula();
-       danMachiPeli.setNombre(" DanMachi: Arrow of the Orion");
-       danMachiPeli.setAñoLanzamiento(2019);
-       danMachiPeli.duracion = 82;
+
+       Pelicula danMachiPeli = new Pelicula(" DanMachi: Arrow of the Orion", 2019, 82 );
+       //Pelicula danMachiPeli = new Pelicula();
+      // danMachiPeli.setNombre(" DanMachi: Arrow of the Orion");
+       //danMachiPeli.setAñoLanzamiento(2019);
+       //danMachiPeli.duracion = 82;
 
        actor = new Actor(); 
        actor.setNombre ("Inori Minase");
@@ -139,10 +143,7 @@ public class Metflix {
        howIMetYM.getTemporadas().add(temporada);
        //Creo un Websodio
        Websodio ws = new Websodio(35, "Nombre websodio en Internet", "http://miepisodios.com/websodio.avi");
-       //ws.setNombre ("Nombre websodio en Internet");
-       //ws.setNumero (35);
        episodio.setDuracion(42);
-       //ws.link = "http://miepisodios.com/websodio.avi";
 
        //Aca no creamos nada nuevo, porque el Websodio, al ser un episodio, 
        //va a estar en la lista de episodios
@@ -306,7 +307,8 @@ public class Metflix {
        return null;
 
     } 
-    
+
+
     //metodo: buscar pelicula
     public Pelicula buscarPelicula(String nombrePelicula){
         for (Pelicula pelicula : this.peliculas) {
@@ -318,6 +320,48 @@ public class Metflix {
         }
         return null;
     }
+
+    //metodo para imprimir la lista de peliculas
+
+    public void listaPeliculas() {
+        System.out.println("Listando las peliculas");
+
+        System.out.println("***************");
+
+        for (Pelicula pelicula : this.peliculas){
+
+            System.out.println("Pelicula: " + pelicula.nombre);
+
+        }
+    }
+
+    // metodo para imprimir la lista de series
+
+    public void listaSeries() {
+        System.out.println("Listando las series");
+
+        System.out.println("***************");
+
+        for (Serie serie : this.series){
+
+            System.out.println("Serie: " + serie.nombre);
+
+        }
+    }
+
+    /*public void listaTemporadas() {
+        System.out.println("Listando las temporadas de la serie elegida: ");
+
+        System.out.println("***************");
+
+        for (Temporada temporada : Serie.danMachi.getTemporadas){
+
+            System.out.println("Temporada: " + temporada.setNumero);
+
+        }
+    }*/
+
+
 
     //Creo un metodo para mostrar las nominaciones
 

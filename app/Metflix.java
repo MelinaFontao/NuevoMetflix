@@ -348,13 +348,13 @@ public class Metflix {
 
         }
     }
-
+    
     /*public void listaTemporadas() {
         System.out.println("Listando las temporadas de la serie elegida: ");
 
         System.out.println("***************");
 
-        for (Temporada temporada : Serie.danMachi.getTemporadas){
+        for (Temporada temporada : Serie.getTemporadas){
 
             System.out.println("Temporada: " + temporada.setNumero);
 

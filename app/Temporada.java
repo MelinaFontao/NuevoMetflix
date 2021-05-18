@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Temporada{
-    private int numero;
     private String nombre; // Esto es el nombre de la temporada
     private List<Episodio> episodios = new ArrayList<>();
+    private int numero;
 
     public List<Episodio> getEpisodios(){
         return this.episodios;
@@ -32,7 +32,7 @@ public class Temporada{
         this.numero = numero;
     }
 
-    public Episodio buscarEpisodio(int numeroEpisodio){ 
+    public Episodio buscarEpisodio(int opcionEpisodio){ 
         //Episodio es lo que me va a devolver el metodo
         //buscarEpisodio es el nombre del metodo
         //int numeroEpisodio es el numero de episodio que tengo que buscar
@@ -40,11 +40,25 @@ public class Temporada{
         for (Episodio episodio: this.episodios){
             //Aca como tenemos que comparar (y para eso hay que leer),
             //No vamos a usar el setter sino el getter
-            if (episodio.getNumero() == numeroEpisodio){
+            if (episodio.getNumero() == opcionEpisodio){
                 return episodio;
             }
         }
         return null;
     }
+
+    public void listaEpisodios() {
+        System.out.println("Listando los episodios disponibles");
+
+        System.out.println("***************");
+
+        for (Episodio episodio: this.episodios){
+
+            System.out.println("Episodio: " + episodio.getNumero()); 
+
+        }
+    }
+
+    
 
 }

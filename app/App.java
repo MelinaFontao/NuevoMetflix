@@ -11,6 +11,8 @@ public class App {
         int opcion;
         String opcionpelicula;
         String opcionserie;
+        int opcionTemporada;
+        int opcionEpisodio;
 
 
         //A partir de Metflix, buscar la temporada 5 episodio 1 de la serie
@@ -74,10 +76,19 @@ public class App {
    
            //Asigno la serie encontrada en una variable
 
-           Temporada temporada = serieBuscada.buscarTemporada(1);
-   
+           System.out.println("Ingrese el numero de temporada de la serie que quiere reproducir: ");
+           opcionTemporada = Teclado.nextInt();
+
+
+           Temporada temporada = serieBuscada.buscarTemporada(opcionTemporada);
+
+           System.out.println("Ingrese el numero de episodio de la serie que quiere reproducir: ");
+           temporada.listaEpisodios();
+
+           opcionEpisodio = Teclado.nextInt();
+
            //Asigno el episodio encontrado en una variable
-           Episodio episodio = temporada.buscarEpisodio(7);
+           Episodio episodio = temporada.buscarEpisodio(opcionEpisodio);
    
            //Llamamos al metodo reproducir episodio
            episodio.reproducir();

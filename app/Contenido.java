@@ -14,6 +14,15 @@ public abstract class Contenido {
     protected int añoLanzamiento;
     public Actor actor;
     private List<Actor> actores = new ArrayList<>();
+    private int numero;
+
+    public int getNumero(){
+        return this.numero;
+    }
+ 
+    public void setNumero(int numero) {
+      this.numero = numero;
+    }
 
     public List<Actor> getActores(){
        return this.actores;

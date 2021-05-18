@@ -26,5 +26,19 @@ public class Serie extends Contenido {
         return null;
     }
 
+    // metodo para imprimir la lista de temporadas
+
+    public void listaTemporadas() {
+        System.out.println("Listando las temporadas disponibles");
+
+        System.out.println("***************");
+
+        for (Temporada temporada: this.temporadas){
+
+            System.out.println("Temporada: " + temporada.getNumero()); 
+
+        }
+    }
+
 
 }
